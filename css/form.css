@@ -1,0 +1,115 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	color: #323232;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+}
+a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none !important;
+}
+.seo-investor {
+	margin: 30px 0;
+}
+.seo-investor h1 {
+	font-size: 46px;
+	text-align: center;
+	color: #53AFD8;
+	/* color: #EA973E; */
+	font-family: 'Roboto', sans-serif;
+	line-height: 50px;
+	margin: 5px 0 20px;
+	text-transform: capitalize;
+}
+.seo-investor h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 33px;
+	color: #375884;
+	line-height: 33px;
+	text-align: center;
+	margin: 0 0 20px;
+	font-weight: 300;
+}
+.seo-investor .leads-bold-text{
+	font-weight: 700;
+}
+.seo-investor .seo-70{
+   position: relative;
+   display: inline-block;
+   border-bottom: 3px solid #375884;
+}
+.seo-investor .desc {
+	text-align: center;
+	line-height: 22px;
+	font-size: 20px;
+	margin: 0 0 20px;
+	font-weight: 400;
+}
+.email-text-box {
+	background: #F5F5F5;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.form-control.email-input {
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+.form-control.email-input:focus {
+	border: 1px solid #6DBBDD;
+}
+.policy-text {
+	font-size: 15px;
+	margin: 10px 0 0;
+	font-weight: 400;
+}
+.report-btn {
+	border: 0;
+	background: #4A9238;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 22px;
+	display: block;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	margin: 10px auto 0;
+	text-transform: capitalize;
+}
+.report-btn:hover{
+	opacity: 0.9;
+}
+.share-area {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.share-area a {
+	display: flex;
+	padding: 0 15px;
+	color: #fff;
+	font-size: 14px;
+	align-items: flex-start;
+	line-height: 35px;
+	margin: 0 10px 20px 0;
+	height: 35px;
+	text-transform: capitalize;
+}
+.share-area a:hover{
+	opacity: 0.9;
+}
+.share-area span {
+	display: inline-block;
+	margin-right: 6px;
+	font-size: 14px;
+}
+.share-area .twitter{background: #4AAAE7;}
+.share-area .facebook{background: #405993;}
+.share-area .linkedin{background: #327AB1;}

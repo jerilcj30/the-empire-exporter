@@ -1,0 +1,24 @@
+@media (max-width:600px){
+    .seo-investor h1 {
+        font-size: 30px;
+        line-height: 34px;
+        margin: 5px 0 10px;
+    }
+    .seo-investor h2 {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0 0 10px;
+    }
+    .policy-text {
+        text-align: justify;
+    }
+    .report-btn {
+        padding: 10px;
+        font-size: 18px;
+    }
+    .seo-investor .desc {
+        text-align: justify;
+        line-height: 25px;
+        margin: 0 0 10px;
+    }
+}
