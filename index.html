@@ -9,26 +9,7 @@
   <link rel="icon" type="image/png" href="./img/shipping.png"/>
 
   <title>The Empire Exporter</title>
-  <script type="text/javascript">
-    /** This section is only needed once per page if manually copying **/
-    if (typeof MauticSDKLoaded == 'undefined') {
-        var MauticSDKLoaded = true;
-        var head            = document.getElementsByTagName('head')[0];
-        var script          = document.createElement('script');
-        script.type         = 'text/javascript';
-        script.src          = 'https://optin.iogrids.com/media/js/mautic-form.js';
-        script.onload       = function() {
-            MauticSDK.onLoad();
-        };
-        head.appendChild(script);
-        var MauticDomain = 'https://optin.iogrids.com';
-        var MauticLang   = {
-            'submittingMessage': "Please wait..."
-        }
-    }else if (typeof MauticSDK != 'undefined') {
-        MauticSDK.onLoad();
-    }
-</script>
+ 
 
 </head>
 
@@ -198,14 +179,7 @@
       <!-- Footer -->
     </section>
 
-    <script>
-      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
-          w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
-          m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://optin.iogrids.com/mtc.js','mt');
-  
-      mt('send', 'pageview');
-  </script>
+   
 
 </body>
 
