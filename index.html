@@ -14,27 +14,21 @@
 </head>
 
 <body>
-  <section class="menu-bar">
-    <div class="row">
-      <div class="col-md-12">
-        <nav class="navbar navbar-light blue">
-          <a class="navbar-brand" href="index.html">
-            <img src="./img/shipping.png" width="30" height="30" alt="">
-            
-            <!--<span>theempireexporter.com</span>-->
-          </a>
-        </nav>
-      </div>
-    </div>
-  </section>
+  
+
 
   <section class="pt-5 pb-5 pb-0 homepage-hero-module" >
     <div class="bg-overlay position-absolute"></div>
     <div class="container position-relative zindex-1 pt-3 pb-3">
+      <a class="navbar-brand" href="index.html">
+        <img src="./img/shipping.png" width="30" height="30" alt="">
+      
+        <!--<span>theempireexporter.com</span>-->
+      </a>
       <div class="row  text-center align-content-center justify-content-between ">
         <div class="col-12 col-md-7 pr-md-5 text-left align-self-center "> 
-        <p class="lead text-warning">THE EMPIRE EXPORTER </p>
-          <h1 class="mb-4 text-white font-weight-bold"><strong>Top Exporter Reveals How He Gets a Steady Set of Export Orders and Exports 2*40ft Container Weekly Using a Radical New Approach..!!</strong></h1>
+        <p class="lead text-warning text-center text-sm-left">THE EMPIRE EXPORTER </p>
+          <h1 class="mb-4 text-white font-weight-bold text-center text-sm-left"><strong>Top Exporter Reveals How He Gets a Steady Set of Export Orders and Exports 2*40ft Container Weekly Using a Radical New Approach..!!</strong></h1>
          
          
         </div>
@@ -42,18 +36,18 @@
           <div class="card shadow-lg border border-primary text-white text-left h-100">
             <div class="card-body bg-primary px-4 py-5">
               <h3 class="pb-3 font-weight-bold text-center">Get the Book Now!!!</h3>
-              <form action="#" method="post" enctype="multipart/form-data">
+              <form action="#" method="post" enctype="multipart/form-data" onsubmit="submitForm(event)">
                 <div></div>
         <div></div>
         <div>
                 <div class="form-group">
                   <label class="sr-only">First name</label>
-                  <input type="text" placeholder="Enter Your Name..." class="form-control-lg form-control">
+                  <input type="text" id="name" placeholder="Enter Your Name..." class="form-control-lg form-control">
                   <span style="display: none;">Please enter your first name</span>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" >Email</label>
-                  <input type="text" placeholder="Email Address..." class="form-control-lg form-control">
+                  <input type="text" id="email" placeholder="Email Address..." class="form-control-lg form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-dark btn-lg mt-2 shadow-lg btn-block">Download Now!</button>
@@ -72,7 +66,7 @@
   <section class="content">
     <div class="container page-wrapper">
       <div class="row ">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6 left_side_image">
           <img src="./img/img2.png" class="img-fluid" alt="" srcset="">
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -173,6 +167,48 @@
       <!-- Footer -->
     </section>
 
+    <script type="text/javascript">
+      function submitForm(event) {
+
+         event.preventDefault(); // prevent form from submitting normally
+
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+
+         sendToMautic(name, email)
+      }
+
+      function serializeData(obj) {
+          if ('string' == typeof obj) {
+            return obj;
+          }
+          return Object.keys(obj).map(function (key) {
+            return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+          }).join('&');
+      }
+
+      async function sendToMautic(name, email) {
+
+        const FORM_ID = 1
+        const url = 'https://mautic.johcp.com//form/submit';
+
+        const data = {
+          'mauticform[formId]': FORM_ID,
+          'mauticform[enter_your_name]': name,
+          'mauticform[enter_your_email]': email
+        };
+
+        return fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+          body: serializeData(data)
+        })
+
+      }
+    </script>
    
 
 </body>
